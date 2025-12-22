@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FitLife Tracker
 
 FitLife Tracker is a beginner-friendly fitness tracking application built with **Next.js (App Router)** and **Tailwind CSS**. It relies on local state (localStorage) and mock data, making it a perfect starting point for learning Next.js without the complexity of a backend.
@@ -66,3 +67,7 @@ Here are some ideas for taking this project further:
 ## 📝 License
 
 This project is open-source and available for educational purposes.
+=======
+# Fitlife_Website
+more about fitness
+>>>>>>> 31a879b736184ecd5fd6e96ec326aac6935f9b72
