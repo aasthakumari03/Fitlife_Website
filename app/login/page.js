@@ -13,7 +13,7 @@ export default function LoginPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (formData.email && formData.password) {
-            router.push('/dashboard');
+            router.push('/workout-categories');
         }
     };
 

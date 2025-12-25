@@ -1,7 +1,8 @@
 "use client";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LogIn, UserPlus, Dumbbell } from 'lucide-react';
+import { LogIn, UserPlus } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -11,10 +12,8 @@ export default function Navbar() {
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isHome ? 'bg-slate-900/50 backdrop-blur-md text-white' : 'bg-white/80 backdrop-blur-md shadow-sm border-b text-gray-800'}`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 group transition-all duration-300">
-                    <div className={`p-2 rounded-xl transition-colors ${isHome ? 'bg-blue-600 group-hover:bg-blue-500' : 'bg-blue-100 group-hover:bg-blue-200'}`}>
-                        <Dumbbell className={`w-6 h-6 ${isHome ? 'text-white' : 'text-blue-600'}`} />
-                    </div>
-                    <span className="text-2xl font-black tracking-tighter uppercase italic">FitLife</span>
+                    <Logo />
+                    <span className="text-2xl font-black tracking-tighter uppercase italic">fit-tracker</span>
                 </Link>
 
                 <div className="flex items-center gap-4 md:gap-8">

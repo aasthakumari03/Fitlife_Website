@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Sidebar() {
     const links = [
@@ -12,7 +13,10 @@ export default function Sidebar() {
     return (
         <aside className="w-64 bg-white border-r h-screen fixed left-0 top-0 overflow-y-auto hidden md:flex flex-col z-40">
             <div className="p-6">
-                <h2 className="text-2xl font-bold text-blue-600 mb-8">FitLife Tracker</h2>
+                <div className="flex items-center gap-2 mb-8 group">
+                    <Logo className="w-5 h-5" />
+                    <h2 className="text-2xl font-bold text-blue-600">fit-tracker</h2>
+                </div>
                 <nav className="space-y-2">
                     {links.map((link) => (
                         <Link key={link.href} href={link.href} className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-medium transition-colors">
