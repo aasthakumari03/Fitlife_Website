@@ -55,13 +55,23 @@ export default function Home() {
             </div>
 
             {/* Footer */}
-            <footer className="absolute bottom-8 left-0 right-0 z-20 text-center">
-                <p className="text-slate-500 text-sm font-light tracking-wide">
-                    with ❤️ by Aastha.
-                </p>
-                <p className="text-slate-600 text-xs mt-1 font-light tracking-widest uppercase">
-                    2025
-                </p>
+            <footer className="absolute bottom-8 left-0 right-0 z-20 px-8 flex justify-between items-end">
+                {/* AK Logo only in the footer bottom-left */}
+                <div className="group cursor-pointer">
+                    <Logo variant="AK" className="w-8 h-8 opacity-60 hover:opacity-100 transition-opacity" />
+                </div>
+
+                <div className="text-center absolute left-1/2 -translate-x-1/2">
+                    <p className="text-slate-500 text-sm font-light tracking-wide">
+                        with ❤️ by Aastha.
+                    </p>
+                    <p className="text-slate-600 text-xs mt-1 font-light tracking-widest uppercase">
+                        2025
+                    </p>
+                </div>
+
+                {/* Empty div for right side balance if needed, or just leave it */}
+                <div className="w-8 h-8"></div>
             </footer>
         </main>
     );

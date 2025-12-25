@@ -1,29 +1,69 @@
 "use client";
 import React from 'react';
 
-export default function Logo({ className = "w-6 h-6" }) {
+export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
   return (
-    <div className={`relative flex items-center justify-center bg-black p-2 rounded-xl transition-all duration-300 group-hover:scale-110 shadow-lg shadow-black/20`}>
+    <div className={`group relative flex items-center bg-black p-2 rounded-xl transition-all duration-500 hover:pr-6 shadow-lg shadow-black/20 overflow-hidden max-w-fit`}>
       {/* Subtle Glow Effect */}
       <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
 
-      {/* Slanted Geometric FT SVG Logo */}
-      <svg
-        viewBox="0 0 400 200"
-        className={`${className} relative z-10`}
-        fill="white"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Letter F (Slanted) */}
-        <path d="M40 160L100 40H280L275 65H115L110 90H250L245 115H105L95 160H40Z" />
+      <div className="flex items-center gap-3">
+        {variant === "FT" ? (
+          /* Slanted Geometric FT SVG Logo */
+          <svg
+            viewBox="0 0 400 200"
+            className={`${className} relative z-10 transition-transform duration-300 group-hover:scale-110`}
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Letter F (Slanted) */}
+            <path d="M40 160L100 40H280L275 65H115L110 90H250L245 115H105L95 160H40Z" />
+            {/* Letter T (Slanted & Tucked) */}
+            <path d="M160 90H330L325 115H260L245 160H195L210 115H160V90Z" />
+          </svg>
+        ) : (
+          /* Slanted Geometric AK SVG Logo */
+          <div className="flex items-center">
+            <svg
+              viewBox="0 0 400 200"
+              className={`${className} relative z-10 transition-transform duration-300 group-hover:scale-110`}
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Letter A (Slanted) */}
+              <path d="M40 160L140 40L240 160H190L165 125H115L90 160H40Z" />
+              <path d="M140 90L152 75H128L140 90Z" fill="black" opacity="0.1" />
+              {/* Letter K (Slanted) */}
+              <path d="M245 40L205 160H255L295 40H245Z" />
+              <path d="M285 40L385 40L315 105L285 40Z" />
+              <path d="M305 115L385 160H335L270 115L305 115Z" />
+            </svg>
 
-        {/* Letter T (Slanted & Tucked) */}
-        <path d="M160 90H330L325 115H260L245 160H195L210 115H160V90Z" />
-      </svg>
+            {/* Typing Text Effect */}
+            <span className="typing-text whitespace-nowrap overflow-hidden border-r-2 border-transparent text-white font-bold tracking-tight text-sm uppercase">
+              AASTHA KUMARI
+            </span>
+          </div>
+        )}
+      </div>
 
       <style jsx global>{`
-        .logo-glow {
-          filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+        .typing-text {
+          width: 0;
+          transition: width 0s;
+        }
+        .group:hover .typing-text {
+          animation: typing 1.5s steps(13, end) forwards, blink 0.75s step-end infinite;
+          width: 110px; /* Adjust based on text length */
+          margin-left: 8px;
+        }
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 110px }
+        }
+        @keyframes blink {
+          from, to { border-color: transparent }
+          50% { border-color: white }
         }
       `}</style>
     </div>
