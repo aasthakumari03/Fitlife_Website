@@ -53,6 +53,16 @@ export default function Home() {
                     Trusted by fitness enthusiasts worldwide.
                 </p>
             </div>
+
+            {/* Footer */}
+            <footer className="absolute bottom-8 left-0 right-0 z-20 text-center">
+                <p className="text-slate-500 text-sm font-light tracking-wide">
+                    with ❤️ by Aastha.
+                </p>
+                <p className="text-slate-600 text-xs mt-1 font-light tracking-widest uppercase">
+                    2025
+                </p>
+            </footer>
         </main>
     );
 }
