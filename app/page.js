@@ -1,16 +1,29 @@
 import Link from 'next/link';
 import Logo from '@/components/Logo';
-import { LogIn, UserPlus } from 'lucide-react';
+import { LogIn, UserPlus, Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center relative overflow-hidden">
-            {/* Logo in top left corner */}
-            <div className="absolute top-8 left-8 z-30 group cursor-pointer">
-                <Link href="/" className="flex items-center gap-3">
+            {/* Logo and Social Icons in top left corner */}
+            <div className="absolute top-8 left-8 z-30 flex items-center gap-6">
+                <Link href="/" className="flex items-center gap-3 group cursor-pointer">
                     <Logo className="w-8 h-8" />
                     <span className="text-2xl font-black tracking-tighter uppercase italic text-white drop-shadow-md">fit-tracker</span>
                 </Link>
+
+                {/* Social Media Link Icons */}
+                <div className="flex items-center gap-3 border-l border-white/20 pl-6">
+                    <a href="https://github.com/aasthakumari03" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-black/40 border border-white/30 rounded-xl backdrop-blur-md text-white hover:bg-white/20 transition-all hover:scale-110 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        <Github size={20} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/aastha-kumari-2116a837a" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-black/40 border border-white/30 rounded-xl backdrop-blur-md text-white hover:bg-white/20 transition-all hover:scale-110 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        <Linkedin size={20} />
+                    </a>
+                    <a href="https://www.instagram.com/the_nytheris/#" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-black/40 border border-white/30 rounded-xl backdrop-blur-md text-white hover:bg-white/20 transition-all hover:scale-110 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        <Instagram size={20} />
+                    </a>
+                </div>
             </div>
 
             {/* Navigation Bar in top right corner */}
@@ -58,7 +71,7 @@ export default function Home() {
             <footer className="absolute bottom-8 left-0 right-0 z-20 px-8 flex justify-between items-end">
                 {/* AK Logo only in the footer bottom-left */}
                 <div className="group cursor-pointer">
-                    <Logo variant="AK" className="w-8 h-8 opacity-60 hover:opacity-100 transition-opacity" />
+                    <Logo variant="AK" className="w-8 h-8 opacity-80 hover:opacity-100 transition-opacity" />
                 </div>
 
                 <div className="text-center absolute left-1/2 -translate-x-1/2">

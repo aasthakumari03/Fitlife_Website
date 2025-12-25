@@ -54,12 +54,12 @@ export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
         }
         .group:hover .typing-text {
           animation: typing 1.5s steps(13, end) forwards, blink 0.75s step-end infinite;
-          width: 110px; /* Adjust based on text length */
+          width: 140px; /* Adjust based on text length */
           margin-left: 8px;
         }
         @keyframes typing {
           from { width: 0 }
-          to { width: 110px }
+          to { width: 140px }
         }
         @keyframes blink {
           from, to { border-color: transparent }
