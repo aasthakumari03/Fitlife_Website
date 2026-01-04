@@ -51,7 +51,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="relative z-20 text-center max-w-5xl mx-auto px-6">
+            <div className="relative z-20 text-center max-w-5xl mx-auto px-6 mb-32">
                 <h1 className="text-7xl md:text-9xl font-black mb-8 tracking-tighter text-white leading-[0.9] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                     Think less. <br />
                     <span className="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
@@ -69,6 +69,58 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Featured Projects Section */}
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-10 mb-40">
+                <div className="flex items-end justify-between mb-16 px-4">
+                    <div>
+                        <span className="text-blue-500 font-bold text-xs tracking-[0.4em] uppercase mb-4 block">Selected Works</span>
+                        <h2 className="text-5xl font-black text-white tracking-tighter">Featured Projects</h2>
+                    </div>
+                    <div className="hidden md:block w-1/3 h-[1px] bg-gradient-to-r from-white/20 to-transparent"></div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        {
+                            title: "FitLife Tracker",
+                            desc: "A comprehensive fitness ecosystem with real-time tracking and personalized insights.",
+                            tags: ["Next.js", "Tailwind", "Firebase"],
+                            color: "blue"
+                        },
+                        {
+                            title: "Nebula UI Kit",
+                            desc: "A futuristic design system for data-heavy applications with galaxy-themed components.",
+                            tags: ["React", "Framer Motion", "CSS"],
+                            color: "purple"
+                        },
+                        {
+                            title: "Zenith CRM",
+                            desc: "High-performance customer relationship management tool built for speed and efficiency.",
+                            tags: ["TypeScript", "Node.js", "Redis"],
+                            color: "indigo"
+                        }
+                    ].map((project, i) => (
+                        <div
+                            key={i}
+                            className="group relative bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-xl hover:bg-white/[0.08] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 ring-1 ring-white/5"
+                        >
+                            <div className="absolute top-0 right-10 w-20 h-20 bg-blue-500/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+
+                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                            <p className="text-slate-400 text-sm leading-relaxed mb-8">{project.desc}</p>
+
+                            <div className="flex flex-wrap gap-2 mt-auto">
+                                {project.tags.map((tag, j) => (
+                                    <span key={j} className="text-[10px] uppercase tracking-widest font-black text-white/40 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 group-hover:border-blue-500/30 group-hover:text-blue-400/80 transition-all duration-500">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             {/* Scroll Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">Scroll to Explore</span>
@@ -78,7 +130,7 @@ export default function Home() {
             </div>
 
             {/* Footer */}
-            <footer className="absolute bottom-8 left-0 right-0 z-20 px-8 flex justify-between items-center opacity-40 hover:opacity-100 transition-opacity duration-500">
+            <footer className="relative z-20 w-full px-12 py-12 flex justify-between items-center opacity-40 hover:opacity-100 transition-opacity duration-500 mt-20">
                 <div className="flex gap-4 text-[10px] tracking-[0.2em] uppercase font-bold text-white/40">
                     <a href="#" className="hover:text-blue-400 transition-colors">Privacy</a>
                     <a href="#" className="hover:text-blue-400 transition-colors">Terms</a>
@@ -103,6 +155,5 @@ export default function Home() {
                 }
             `}</style>
         </main>
-        </main >
     );
 }
