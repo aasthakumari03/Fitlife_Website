@@ -121,6 +121,60 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Technical Arsenal Section */}
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-10 mb-40">
+                <div className="flex items-end justify-between mb-16 px-4">
+                    <div className="hidden md:block w-1/3 h-[1px] bg-gradient-to-l from-white/20 to-transparent"></div>
+                    <div className="text-right">
+                        <span className="text-blue-500 font-bold text-xs tracking-[0.4em] uppercase mb-4 block">Powering the Future</span>
+                        <h2 className="text-5xl font-black text-white tracking-tighter">Technical Arsenal</h2>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                        {
+                            cat: "Frontend",
+                            skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                            icon: "✨"
+                        },
+                        {
+                            cat: "Backend",
+                            skills: ["Node.js", "Express", "Python", "Go"],
+                            icon: "⚙️"
+                        },
+                        {
+                            cat: "Cloud & Devops",
+                            skills: ["AWS", "Docker", "CI/CD", "Kubernetes"],
+                            icon: "☁️"
+                        },
+                        {
+                            cat: "Design",
+                            skills: ["Figma", "Adobe CC", "Spline", "Blender"],
+                            icon: "🎨"
+                        }
+                    ].map((item, i) => (
+                        <div
+                            key={i}
+                            className="group relative bg-white/[0.03] border border-white/5 p-8 rounded-[2.5rem] backdrop-blur-3xl hover:bg-white/[0.06] hover:border-white/20 transition-all duration-700 hover:-translate-y-1 overflow-hidden"
+                        >
+                            <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/10 blur-[60px] group-hover:bg-blue-500/20 transition-all duration-700"></div>
+
+                            <div className="text-3xl mb-6">{item.icon}</div>
+                            <h3 className="text-xl font-black text-white mb-6 tracking-tight uppercase group-hover:text-blue-400 transition-colors">{item.cat}</h3>
+                            <div className="space-y-3">
+                                {item.skills.map((skill, j) => (
+                                    <div key={j} className="flex items-center gap-3">
+                                        <div className="w-1 h-1 rounded-full bg-blue-500/40 group-hover:bg-blue-400 transition-colors"></div>
+                                        <span className="text-slate-400 text-sm group-hover:text-white transition-colors">{skill}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             {/* Scroll Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">Scroll to Explore</span>
