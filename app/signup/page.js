@@ -24,9 +24,9 @@ export default function SignupPage() {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-                <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-                    <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Create Account</h2>
+            <div className="min-h-screen flex items-center justify-center bg-transparent px-4">
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/10 w-full max-w-md">
+                    <h2 className="text-2xl font-bold mb-6 text-center text-white">Create Account</h2>
                     <form onSubmit={handleSubmit}>
                         <Input
                             label="Email"

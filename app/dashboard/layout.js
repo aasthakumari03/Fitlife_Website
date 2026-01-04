@@ -2,7 +2,7 @@ import Sidebar from '@/components/Sidebar';
 
 export default function DashboardLayout({ children }) {
     return (
-        <div className="flex min-h-screen bg-gray-50">
+        <div className="flex min-h-screen bg-transparent">
             <Sidebar />
             <main className="flex-1 md:ml-64 p-8">
                 {children}

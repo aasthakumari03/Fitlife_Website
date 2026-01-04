@@ -37,7 +37,7 @@ export default function WorkoutCategories() {
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-lime-400 selection:text-black">
             {/* Header Section */}
-            <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg text-black px-4 sm:px-8 py-3">
+            <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/5 text-white px-4 sm:px-8 py-3">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         <Link href="/" className="flex items-center gap-2 group">

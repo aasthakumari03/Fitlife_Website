@@ -9,7 +9,7 @@ export default function Navbar() {
     const isHome = pathname === '/';
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isHome ? 'bg-slate-900/50 backdrop-blur-md text-white' : 'bg-white/80 backdrop-blur-md shadow-sm border-b text-gray-800'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/[0.03] bg-black/10 backdrop-blur-[32px] text-white`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 group transition-all duration-300">
                     <Logo />

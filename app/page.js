@@ -44,17 +44,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            {/* Background Image Container */}
-            <div
-                className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-1000 scale-105"
-                style={{
-                    backgroundImage: "url('/images/gym-bg.png')",
-                    filter: "brightness(0.6) contrast(1.1)"
-                }}
-            ></div>
-
-            {/* Dark Overlay Gradient - Deepened */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/80 to-slate-950 z-10"></div>
+            {/* Removed old Background Image/Overlays to show Global Universe Theme */}
 
             <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
                 <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tight text-white">
@@ -68,23 +58,15 @@ export default function Home() {
             </div>
 
             {/* Footer */}
-            <footer className="absolute bottom-8 left-0 right-0 z-20 px-8 flex justify-between items-end">
-                {/* AK Logo only in the footer bottom-left */}
-                <div className="group cursor-pointer">
-                    <Logo variant="AK" className="w-8 h-8 opacity-80 hover:opacity-100 transition-opacity" />
-                </div>
-
-                <div className="text-center absolute left-1/2 -translate-x-1/2">
+            <footer className="absolute bottom-8 left-0 right-0 z-20 px-8 flex justify-center items-end">
+                <div className="text-center">
                     <p className="text-slate-500 text-sm font-light tracking-wide">
-                        with ❤️ by Aastha.
+                        with ❤️ by <span className="font-kaushan text-base">Aastha Kumari</span>.
                     </p>
                     <p className="text-slate-600 text-xs mt-1 font-light tracking-widest uppercase">
                         2025
                     </p>
                 </div>
-
-                {/* Empty div for right side balance if needed, or just leave it */}
-                <div className="w-8 h-8"></div>
             </footer>
         </main>
     );

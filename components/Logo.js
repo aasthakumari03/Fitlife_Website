@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
   return (
@@ -40,9 +41,15 @@ export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
             </svg>
 
             {/* Typing Text Effect */}
-            <span className="typing-text whitespace-nowrap overflow-hidden border-r-2 border-transparent text-white font-bold tracking-tight text-sm uppercase">
-              AASTHA KUMARI
+            <span className="typing-text whitespace-nowrap overflow-hidden border-r-2 border-transparent text-white font-medium tracking-normal text-lg font-kaushan">
+              Aastha Kumari
             </span>
+            {/* Social Icons */}
+            <div className="flex items-center gap-2">
+              <Github className="w-5 h-5 text-white transition-transform duration-300 hover:scale-110" />
+              <Linkedin className="w-5 h-5 text-white transition-transform duration-300 hover:scale-110" />
+              <Instagram className="w-5 h-5 text-white transition-transform duration-300 hover:scale-110" />
+            </div>
           </div>
         )}
       </div>
@@ -55,7 +62,7 @@ export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
         .group:hover .typing-text {
           animation: typing 1.5s steps(13, end) forwards, blink 0.75s step-end infinite;
           width: 140px; /* Adjust based on text length */
-          margin-left: 8px;
+          margin-left: 12px;
         }
         @keyframes typing {
           from { width: 0 }
@@ -64,6 +71,9 @@ export default function Logo({ className = "w-6 h-6", variant = "FT" }) {
         @keyframes blink {
           from, to { border-color: transparent }
           50% { border-color: white }
+        }
+        .font-kaushan {
+          font-family: var(--font-kaushan);
         }
       `}</style>
     </div>
