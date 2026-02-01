@@ -1,38 +1,56 @@
 "use client";
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LogIn, UserPlus } from 'lucide-react';
-import Logo from './Logo';
+import { LayoutDashboard, Dumbbell, TrendingUp, User } from 'lucide-react';
 
-export default function Navbar() {
+const Navbar = () => {
     const pathname = usePathname();
     const isHome = pathname === '/';
 
-    return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/[0.03] bg-black/10 backdrop-blur-[32px] text-white`}>
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2 group transition-all duration-300">
-                    <Logo />
-                    <span className="text-2xl font-black tracking-tighter uppercase italic">fit-tracker</span>
-                </Link>
+    const navItems = [
+        { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+        { label: 'Routines', href: '/routines', icon: Dumbbell },
+        { label: 'Progress', href: '/progress', icon: TrendingUp },
+        { label: 'Profile', href: '/profile', icon: User },
+    ];
 
-                <div className="flex items-center gap-4 md:gap-8">
-                    <Link
-                        href="/login"
-                        className={`group flex items-center gap-2 font-semibold transition-all hover:translate-y-[-1px] ${isHome ? 'text-slate-300 hover:text-white' : 'text-gray-600 hover:text-blue-600'}`}
-                    >
-                        <LogIn className="w-5 h-5 transition-transform group-hover:scale-110" />
-                        <span className="hidden sm:inline">Login</span>
-                    </Link>
-                    <Link
-                        href="/signup"
-                        className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-bold transition-all hover:shadow-lg hover:translate-y-[-2px] active:scale-95 ${isHome ? 'bg-white text-slate-900 hover:bg-slate-100' : 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-600/20'}`}
-                    >
-                        <UserPlus className="w-5 h-5" />
-                        <span className="hidden sm:inline">Sign Up</span>
-                    </Link>
+    return (
+        <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2 group">
+                <div className="w-8 h-8 rounded-full border-2 border-[var(--chalk-white)] flex items-center justify-center bg-[var(--bg-charcoal)] group-hover:bg-[var(--chalk-white)] transition-all duration-500">
+                    <span className="text-xs font-bold text-[var(--chalk-white)] group-hover:text-[var(--bg-charcoal)] transition-colors">FL</span>
                 </div>
+                <span className="text-lg font-bold tracking-tight text-[var(--chalk-white)]">FitLife Tracker</span>
+            </Link>
+
+            {/* Nav Links */}
+            <div className="hidden md:flex items-center gap-1 p-1 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md transition-all duration-300">
+                {navItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive
+                                ? 'bg-[var(--chalk-white)] text-[var(--bg-charcoal)] shadow-lg'
+                                : 'text-[var(--silver-accent)] hover:text-[var(--chalk-white)] hover:bg-white/5'
+                                }`}
+                        >
+                            <item.icon size={16} />
+                            {item.label}
+                        </Link>
+                    )
+                })}
+            </div>
+
+            {/* Mobile Menu Placeholder (Hidden on tablet+, visible/functional if needed later) */}
+            <div className="md:hidden">
+                {/* Simple generic menu icon/button could go here */}
             </div>
         </nav>
     );
-}
+};
+
+export default Navbar;

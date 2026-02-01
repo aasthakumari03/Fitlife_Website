@@ -62,15 +62,36 @@
 }
 
 :root {
-    --background: #080916;
-    --foreground: #ffffff;
-    scroll-behavior: smooth;
+    /* Gymnastics Theme Palette */
+    --bg-charcoal: #0f1115;
+    /* Deep Charcoal/Navy mix */
+    --chalk-white: #f5f5f7;
+    /* Soft white like chalk */
+    --electric-blue: #5ca1e1;
+    /* Muted blue */
+    --silver-accent: #a0a4ab;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
+    background-color: var(--bg-charcoal);
+    color: var(--chalk-white);
     overflow-x: hidden;
+    font-family: var(--font-inter), sans-serif;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+}
+
+.chalk-text {
+    color: var(--chalk-white);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
 /* Nebula Animations */
