@@ -11,10 +11,7 @@ export default function Home() {
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
 
                 {/* Badge */}
-                <div className="mb-8 px-4 py-1.5 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-sm flex items-center gap-2 animate-fade-in-up">
-                    <span className="w-2 h-2 rounded-full bg-[var(--electric-blue)] shadow-[0_0_10px_var(--electric-blue)]"></span>
-                    <span className="text-[10px] uppercase tracking-widest text-[var(--silver-accent)] font-medium">Gymnastics Inspired Training</span>
-                </div>
+
 
                 {/* Title */}
                 <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 chalk-text animate-fade-in-up delay-100">
