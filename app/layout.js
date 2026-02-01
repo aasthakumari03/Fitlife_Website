@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { Inter, Kaushan_Script } from "next/font/google";
+import { Inter, Kaushan_Script, Pirata_One } from "next/font/google";
 import GrainyGradientBackground from "@/components/GrainyGradientBackground";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -7,6 +7,11 @@ const kaushan = Kaushan_Script({
     weight: '400',
     subsets: ["latin"],
     variable: '--font-kaushan'
+});
+const pirata = Pirata_One({
+    weight: '400',
+    subsets: ["latin"],
+    variable: '--font-gothic'
 });
 
 export const metadata = {
@@ -17,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${inter.className} ${kaushan.variable}`}>
+            <body className={`${inter.className} ${kaushan.variable} ${pirata.variable}`}>
                 <GrainyGradientBackground />
                 <div className="relative z-10 flex flex-col min-h-screen">
                     {children}
