@@ -2,10 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Activity } from 'lucide-react';
+import AnimatedSilhouette from '@/components/AnimatedSilhouette';
 
 export default function Home() {
     return (
         <main className="flex flex-col items-center justify-center min-h-[85vh] px-6 text-center relative overflow-hidden">
+            <AnimatedSilhouette />
 
             {/* Hero Content */}
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
@@ -45,8 +47,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Background Effect (Light Rays) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--electric-blue)] opacity-[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+
 
         </main>
     );
