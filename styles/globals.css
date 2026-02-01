@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Grainy Blob Animations */
 @keyframes blob-float {
 

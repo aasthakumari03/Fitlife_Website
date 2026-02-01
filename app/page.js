@@ -9,11 +9,11 @@ export default function Home() {
             <div className="absolute top-10 left-10 z-30 flex items-center gap-8">
                 {/* AK Logo */}
                 <div className="flex items-center gap-3 cursor-pointer group transition-all duration-75 ease-linear pointer-events-auto">
-                    <div className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center text-white font-[family-name:var(--font-gothic)] font-bold text-xl transition-all group-hover:rotate-12 duration-500 shrink-0 shadow-lg shadow-teal-500/20">
+                    <div className="w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center text-white font-[family-name:var(--font-gothic)] font-bold text-xl transition-all group-hover:rotate-12 duration-500 shrink-0 shadow-lg shadow-slate-500/20 border border-white/10">
                         AK
                     </div>
                     <div className="logo-typing-text overflow-hidden whitespace-nowrap">
-                        <span className="text-white font-[family-name:var(--font-gothic)] font-bold text-xl tracking-normal uppercase drop-shadow-md ml-3">
+                        <span className="text-slate-300 font-[family-name:var(--font-gothic)] font-bold text-xl tracking-normal uppercase drop-shadow-md ml-3">
                             Aastha Kumari
                         </span>
                     </div>
@@ -34,7 +34,7 @@ export default function Home() {
                             className="p-3 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl text-white/70 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-110 shadow-xl ring-1 ring-white/5 overflow-hidden group"
                         >
                             <div className="relative z-10">{social.icon}</div>
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-gradient-to-tr from-slate-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </a>
                     ))}
                 </div>
@@ -46,12 +46,12 @@ export default function Home() {
                     href="/login"
                     className="flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-xl text-white/90 px-6 py-3 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 group ring-1 ring-white/5"
                 >
-                    <LogIn size={18} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
+                    <LogIn size={18} className="text-slate-400 group-hover:text-slate-300 transition-colors" />
                     <span className="font-bold text-xs tracking-[0.2em]">LOGIN</span>
                 </Link>
                 <Link
                     href="/signup"
-                    className="flex items-center gap-2 bg-blue-600 border border-blue-500/50 backdrop-blur-xl text-white px-6 py-3 rounded-2xl hover:bg-blue-500 hover:border-blue-400 transition-all duration-300 hover:scale-105 group shadow-[0_0_20px_rgba(37,99,235,0.3)] ring-1 ring-blue-400/20"
+                    className="flex items-center gap-2 bg-slate-700/50 border border-slate-600/50 backdrop-blur-xl text-white px-6 py-3 rounded-2xl hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 hover:scale-105 group shadow-[0_0_20px_rgba(100,116,139,0.3)] ring-1 ring-slate-400/20"
                 >
                     <UserPlus size={18} className="text-white transition-transform duration-300 group-hover:rotate-12" />
                     <span className="font-bold text-xs tracking-[0.2em]">GET STARTED</span>
@@ -61,7 +61,7 @@ export default function Home() {
             {/* Center Content */}
             <div className="relative z-20 text-center max-w-5xl mx-auto px-6">
                 <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <span className="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                    <span className="bg-gradient-to-b from-slate-200 to-slate-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(148,163,184,0.3)]">
                         Fitlife-Tracker
                     </span>
                 </h1>
