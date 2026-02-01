@@ -16,17 +16,18 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-12 h-12 rounded-full border-2 border-[var(--chalk-white)] flex items-center justify-center bg-[var(--bg-charcoal)] group-hover:bg-[var(--chalk-white)] transition-all duration-500">
-                    <span className="text-sm font-bold text-[var(--chalk-white)] group-hover:text-[var(--bg-charcoal)] transition-colors">FL</span>
-                </div>
-                <span className="text-2xl font-bold tracking-tight text-[var(--chalk-white)]">FitLife Tracker</span>
-            </Link>
 
-            {/* Nav Links */}
+        <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-end">
+
+            {/* Nav Links + Logo */}
             <div className="hidden md:flex items-center gap-2 p-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md transition-all duration-300">
+                {/* Logo */}
+                <Link href="/" className="flex items-center justify-center group mr-2">
+                    <div className="w-12 h-12 rounded-full border-2 border-[var(--chalk-white)] flex items-center justify-center bg-[var(--bg-charcoal)] group-hover:bg-[var(--chalk-white)] transition-all duration-500">
+                        <span className="text-sm font-bold text-[var(--chalk-white)] group-hover:text-[var(--bg-charcoal)] transition-colors">FL</span>
+                    </div>
+                </Link>
+
                 {navItems.map((item) => {
                     const isActive = pathname === item.href;
                     return (
