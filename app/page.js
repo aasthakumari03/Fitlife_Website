@@ -3,10 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Activity } from 'lucide-react';
 import AnimatedSilhouette from '@/components/AnimatedSilhouette';
+import BreathingBackground from '@/components/BreathingBackground';
 
 export default function Home() {
     return (
         <main className="flex flex-col items-center justify-center min-h-[85vh] px-6 text-center relative overflow-hidden">
+            <BreathingBackground />
 
 
             {/* Hero Content */}
