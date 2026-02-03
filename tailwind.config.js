@@ -5,7 +5,11 @@ module.exports = {
         "./components/**/*.{js,jsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                gothic: ['var(--font-pirata)'],
+            },
+        },
     },
     plugins: [],
 };
