@@ -7,7 +7,7 @@ import AnimatedSilhouette from '@/components/AnimatedSilhouette';
 export default function Home() {
     return (
         <main className="flex flex-col items-center justify-center min-h-[85vh] px-6 text-center relative overflow-hidden">
-            <AnimatedSilhouette />
+
 
             {/* Hero Content */}
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">

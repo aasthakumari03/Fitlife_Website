@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={`${inter.variable} ${pirataOne.variable} antialiased`}>
-                <ChalkBackground />
+
                 <Navbar />
                 <div className="relative z-10 flex flex-col min-h-screen pt-20">
                     {children}

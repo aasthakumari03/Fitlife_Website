@@ -62,16 +62,17 @@
 }
 
 :root {
-    /* Gymnastics Theme Palette */
-    --bg-charcoal: #0f1115;
-    /* Deep Charcoal/Navy mix */
-    --chalk-white: #f5f5f7;
-    /* Soft white like chalk */
-    --electric-blue: #5ca1e1;
-    /* Muted blue */
-    --silver-accent: #a0a4ab;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    /* Gymnastics Theme Palette (Light Mode) */
+    --bg-charcoal: #ffffff;
+    /* Clean White */
+    --chalk-white: #1f2937;
+    /* Dark Charcoal for text */
+    --electric-blue: #3b82f6;
+    /* Brighter blue for light bg */
+    --silver-accent: #4b5563;
+    /* Darker gray for accent */
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -91,7 +92,7 @@ body {
 
 .chalk-text {
     color: var(--chalk-white);
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Nebula Animations */

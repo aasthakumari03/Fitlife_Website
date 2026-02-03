@@ -34,8 +34,8 @@ const ChalkBackground = () => {
 
             // Draw gradient background
             const gradient = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width);
-            gradient.addColorStop(0, '#15171d'); // Slightly lighter charcoal center
-            gradient.addColorStop(1, '#0f1115'); // Dark bg
+            gradient.addColorStop(0, '#ffffff'); // Center white
+            gradient.addColorStop(1, '#f3f4f6'); // Light gray edges
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, width, height);
 
@@ -51,7 +51,7 @@ const ChalkBackground = () => {
 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(245, 245, 247, ${p.alpha})`; // chalk white
+                ctx.fillStyle = `rgba(31, 41, 55, ${p.alpha})`; // dark charcoal particles
                 ctx.fill();
             });
 
