@@ -18,7 +18,7 @@ export default function Home() {
 
 
                 {/* Title */}
-                <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 chalk-text animate-fade-in-up delay-100">
+                <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-gradient-to-r from-blue-400 via-blue-100 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-fade-in-up delay-100">
                     FitLife Tracker
                 </h1>
 
