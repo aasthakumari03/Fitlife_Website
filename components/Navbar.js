@@ -92,8 +92,8 @@ const Navbar = () => {
                                 key={item.href}
                                 href={item.href}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all duration-300 ${isActive
-                                    ? 'bg-[var(--chalk-white)] text-[var(--bg-charcoal)] shadow-lg'
-                                    : 'text-[var(--silver-accent)] hover:text-[var(--chalk-white)] hover:bg-white/5'
+                                    ? 'bg-white text-black shadow-[0_0_15px_rgba(255,255,255,0.3)]'
+                                    : 'text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)]'
                                     }`}
                             >
                                 <item.icon size={18} />
