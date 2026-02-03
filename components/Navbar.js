@@ -69,14 +69,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between">
             {/* Top Left: AK Logo */}
-            <div className="flex-shrink-0">
-                <TypewriterLogo
-                    initials="AK"
-                    fullName="Aastha Kumari"
-                    shape="square"
-                    href="/profile"
-                />
-            </div>
+
 
             {/* Top Right: Nav Links + FL Logo */}
             <div className="flex items-center gap-4">
