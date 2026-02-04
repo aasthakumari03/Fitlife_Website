@@ -43,9 +43,9 @@ export default function Home() {
 
                     <Link
                         href="/progress"
-                        className="group px-8 py-4 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md text-[var(--chalk-white)] font-medium tracking-wide hover:bg-white/5 transition-colors flex items-center gap-2"
+                        className="group px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[var(--chalk-white)] font-medium tracking-wide hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300 flex items-center gap-2"
                     >
-                        <Activity size={18} className="text-[var(--electric-blue)]" />
+                        <Activity size={18} className="text-[var(--electric-blue)] group-hover:scale-110 transition-transform" />
                         View Progress
                     </Link>
                 </div>

@@ -75,19 +75,19 @@ const Navbar = () => {
 
 
                 {/* Nav Links */}
-                <div className="hidden md:flex items-center gap-2 p-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md transition-all duration-300">
+                <div className="hidden md:flex items-center gap-1 p-1.5 rounded-full border border-white/10 bg-black/20 backdrop-blur-xl shadow-lg transition-all duration-300 hover:border-white/20">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all duration-300 ${isActive
+                                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${isActive
                                     ? 'bg-white text-black shadow-[0_0_15px_rgba(255,255,255,0.3)]'
-                                    : 'text-slate-400 hover:text-white hover:bg-white/10 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)]'
+                                    : 'text-gray-400 hover:text-white hover:bg-white/10'
                                     }`}
                             >
-                                <item.icon size={18} />
+                                <item.icon size={16} />
                                 {item.label}
                             </Link>
                         )
@@ -98,14 +98,14 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-3 ml-4">
                     <Link
                         href="/login"
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                        className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white/80 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/30 transition-all duration-300"
                     >
                         <LogIn size={18} />
                         Login
                     </Link>
                     <Link
                         href="/signup"
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold bg-white text-black hover:bg-slate-200 hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                        className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold bg-white text-black hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
                     >
                         <Zap size={18} className="fill-current" />
                         Get Started
