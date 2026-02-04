@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Dumbbell, TrendingUp, User } from 'lucide-react';
+import { LayoutDashboard, Dumbbell, TrendingUp, User, LogIn, Zap } from 'lucide-react';
 
 const TypewriterLogo = ({ initials, fullName, shape = 'circle', href = '/' }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -60,9 +60,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     const navItems = [
-        { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-        { label: 'Routines', href: '/routines', icon: Dumbbell },
-        { label: 'Progress', href: '/progress', icon: TrendingUp },
+        { label: 'Dashboard', href: '/', icon: LayoutDashboard },
         { label: 'Profile', href: '/profile', icon: User },
     ];
 
@@ -72,16 +70,9 @@ const Navbar = () => {
 
 
             {/* Top Right: Nav Links + FL Logo */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ml-auto">
                 {/* FL Logo (Before Dashboard) */}
-                <div className="flex items-center">
-                    <TypewriterLogo
-                        initials="FL"
-                        fullName="Fitlife-Tracker"
-                        shape="circle"
-                        href="/"
-                    />
-                </div>
+
 
                 {/* Nav Links */}
                 <div className="hidden md:flex items-center gap-2 p-2 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md transition-all duration-300">
@@ -101,6 +92,24 @@ const Navbar = () => {
                             </Link>
                         )
                     })}
+                </div>
+
+                {/* Auth Buttons */}
+                <div className="hidden md:flex items-center gap-3 ml-4">
+                    <Link
+                        href="/login"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                    >
+                        <LogIn size={18} />
+                        Login
+                    </Link>
+                    <Link
+                        href="/signup"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold bg-white text-black hover:bg-slate-200 hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                    >
+                        <Zap size={18} className="fill-current" />
+                        Get Started
+                    </Link>
                 </div>
             </div>
 
