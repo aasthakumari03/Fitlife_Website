@@ -18,7 +18,7 @@ export default function Home() {
 
 
                 {/* Title */}
-                <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-gradient-to-r from-blue-400 via-blue-100 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-fade-in-up delay-100">
+                <h1 className="text-7xl md:text-9xl font-gothic tracking-wider mb-6 bg-gradient-to-r from-blue-400 via-blue-100 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-fade-in-up delay-100">
                     FitLife Tracker
                 </h1>
 
@@ -31,12 +31,14 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-6 animate-fade-in-up delay-300">
                     <Link
                         href="/dashboard"
-                        className="group relative px-8 py-4 rounded-full bg-[var(--chalk-white)] text-[var(--bg-charcoal)] font-bold tracking-wide overflow-hidden transition-transform hover:scale-105"
+                        className="group relative h-14 bg-[var(--chalk-white)] text-[var(--bg-charcoal)] font-bold tracking-wide rounded-full overflow-hidden transition-all duration-500 hover:px-8 px-0 min-w-[3.5rem] flex items-center justify-center"
                     >
-                        <span className="relative z-10 flex items-center gap-2">
-                            Start Training <ArrowRight size={18} />
+                        <span className="absolute inset-0 flex items-center justify-center transition-all duration-500 group-hover:opacity-0 group-hover:scale-0 group-hover:rotate-90">
+                            <ArrowRight size={24} />
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-slate-200 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-500 whitespace-nowrap overflow-hidden">
+                            Start Training
+                        </span>
                     </Link>
 
                     <Link
