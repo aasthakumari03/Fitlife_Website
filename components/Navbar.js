@@ -64,6 +64,11 @@ const Navbar = () => {
         { label: 'Profile', href: '/profile', icon: User },
     ];
 
+    if (pathname && pathname.startsWith('/workout-categories')) {
+        return null;
+    }
+
+
     return (
         <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between">
             {/* Top Left: AK Logo */}
