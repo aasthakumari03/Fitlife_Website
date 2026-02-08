@@ -62,24 +62,26 @@
 }
 
 :root {
-    /* Gymnastics Theme Palette (Light Mode) */
-    --bg-charcoal: #ffffff;
-    /* Clean White */
-    --chalk-white: #1f2937;
-    /* Dark Charcoal for text */
+    /* Gymnastics Theme Palette (Dark Mode Update) */
+    --bg-charcoal: #050505;
+    /* Deep Black */
+    --chalk-white: #e5e7eb;
+    /* Light Gray for text */
     --electric-blue: #3b82f6;
-    /* Brighter blue for light bg */
-    --silver-accent: #4b5563;
-    /* Darker gray for accent */
-    --glass-bg: rgba(0, 0, 0, 0.03);
-    --glass-border: rgba(0, 0, 0, 0.08);
+    /* Brighter blue */
+    --silver-accent: #9ca3af;
+    /* Lighter gray for accent */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
-    background-color: var(--bg-charcoal);
+    background: linear-gradient(135deg, #0f172a 0%, #000000 100%);
+    /* Deep Blue to Black Gradient */
     color: var(--chalk-white);
     overflow-x: hidden;
     font-family: var(--font-inter), sans-serif;
+    min-height: 100vh;
 }
 
 /* Glassmorphism Utilities */
