@@ -87,12 +87,12 @@ const Navbar = () => {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${isActive
+                                className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${isActive
                                     ? 'bg-white/10 text-blue-400 border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.2)]'
                                     : 'border-transparent text-slate-400 hover:text-blue-300 hover:bg-white/5'
                                     }`}
                             >
-                                <item.icon size={16} />
+                                <item.icon size={16} className="group-hover:scale-110 transition-transform duration-300" />
                                 {item.label}
                             </Link>
                         )
@@ -103,16 +103,16 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-3 ml-4">
                     <Link
                         href="/login"
-                        className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-slate-300 border border-white/10 hover:bg-blue-500/10 hover:text-blue-300 hover:border-blue-500/30 transition-all duration-300"
+                        className="group flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-slate-300 border border-white/10 hover:bg-blue-500/10 hover:text-blue-300 hover:border-blue-500/30 transition-all duration-300"
                     >
-                        <LogIn size={18} />
+                        <LogIn size={18} className="group-hover:scale-110 transition-transform duration-300" />
                         Login
                     </Link>
                     <Link
                         href="/signup"
-                        className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300"
+                        className="group flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300"
                     >
-                        <Zap size={18} className="fill-current" />
+                        <Zap size={18} className="fill-current group-hover:scale-110 transition-transform duration-300" />
                         Get Started
                     </Link>
                 </div>
